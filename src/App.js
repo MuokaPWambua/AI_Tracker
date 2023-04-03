@@ -11,21 +11,21 @@ function App() {
       <Box style={{
           background:'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/cattle.jpg) no-repeat center',
           backgroundSize: 'cover',
-          width:'100%',
+          width:'100vw',
           height:'90%',
 
           }}>
-            <div className='welcome-note'>
-            <Typography variant="h1" component="h2">Welcom To CK</Typography>
+            <Box className='welcome-note'>
+            <Typography variant="h2" component="h2">Welcome to CK</Typography>
             your best vertinary service provider.
-            </div>
+            </Box>
       </Box>
       <br/>
-      <Typography variant="h1" component="h2">Our services</Typography>
+      <Typography variant="h2" component="h2">Our services</Typography>
       <br/>
       <Services/>
       <br/>
-      <Typography variant="h3" component="h2">Contact us</Typography>
+      <Typography variant="h3" component="h3">Contact us</Typography>
       <br/>
 
       <Footer/>
