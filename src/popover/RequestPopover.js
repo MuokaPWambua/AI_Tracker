@@ -1,18 +1,18 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
+import {TextField} from '@mui/material';
+import useCoords from '../utils/useCoords';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function RequestPopover({open, handleClose}) {
-
+  const [lat, lng] = useCoords()
   return (
     <div>
 
@@ -23,17 +23,47 @@ export default function RequestPopover({open, handleClose}) {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Use Google's location service?"}</DialogTitle>
+        <DialogTitle>Request Service</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
+
+            <form noValidate>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="name"
+                label="Name"
+                name="name"
+                type='text'
+                autoComplete="on"
+              />
+              <TextField
+                margin="normal"
+                required
+                name="contact"
+                label="Contact"
+                type="number"
+                id="message"
+                fullWidth
+                autoComplete="on"
+              />
+              
+              <iframe src={`https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`}
+                        frameBorder="0" width='100%' title='map'/>
+                <br/>
+                
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                onClick={handleClose}
+              >
+                Send
+              </Button>
+            </form>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Request</Button>
-        </DialogActions>
+
       </Dialog>
     </div>
   );
