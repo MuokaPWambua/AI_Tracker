@@ -1,10 +1,22 @@
 import './App.css';
+import React from 'react';
 import Footer from './nav/Footer';
 import TopAppBar from './nav/TopNav';
 import Services from './services/Services';
 import {Typography, Box} from '@mui/material'
+import RequestPopover from './popover/RequestPopover';
 
 function App() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="App">
       <TopAppBar />
@@ -23,12 +35,16 @@ function App() {
       <br/>
       <Typography variant="h2" component="h2">Our services</Typography>
       <br/>
-      <Services/>
+      <Services handleClickOpen={handleClickOpen}/>
       <br/>
       <Typography variant="h3" component="h3">Contact us</Typography>
       <br/>
 
       <Footer/>
+      <RequestPopover
+      open={open}
+      handleClickOpen={handleClickOpen}
+      handleClose={handleClose}/>
     </div>
   );
 }

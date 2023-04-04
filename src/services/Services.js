@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 
 
 
-export function AnimalHealthService() {
+export function AnimalHealthService({handleClickOpen}) {
     return (
         <Card>
         <CardMedia
@@ -29,14 +29,14 @@ export function AnimalHealthService() {
             </Typography>
         </CardContent>
         <CardActions>
-            <Button size="small">Request Service</Button>
+            <Button size="small" onClick={handleClickOpen}>Request Service</Button>
             {/* <Button size="small">Learn More</Button> */}
         </CardActions>
         </Card>
     );
 }
 
-export function NutritionService() {
+export function NutritionService({handleClickOpen}) {
     return (
         <Card >
         <CardMedia
@@ -56,14 +56,14 @@ export function NutritionService() {
             </Typography>
         </CardContent>
         <CardActions>
-            <Button size="small">Request Service</Button>
+            <Button size="small" onClick={handleClickOpen}>Request Service</Button>
             {/* <Button size="small">Learn More</Button> */}
         </CardActions>
         </Card>
     );
 }
 
-export function ArtificialInserminationService() {
+export function ArtificialInserminationService({handleClickOpen}) {
     return (
         <Card>
         <CardMedia
@@ -77,20 +77,20 @@ export function ArtificialInserminationService() {
             Artificial Insermination
             </Typography>
             <Typography variant="body2" color="text.secondary">
-                We are well equipped and offer both local and imported genetics to our customers. Make a date with Our
-                bull for the best heifer calfs.
+                We are well equipped and offer both local and imported genetics to our customers. If you are a cattle farmer,
+                make a date with our best bull today for the best heifer calfs.
             </Typography>
-            <br/>
+        
         </CardContent>
         <CardActions>
-            <Button size="small">Request Service</Button>
+            <Button size="small" onClick={handleClickOpen}>Request Service</Button>
             {/* <Button size="small">Learn More</Button> */}
         </CardActions>
         </Card>
     );
     }
 
-export function ConsultanceService() {
+export function ConsultanceService({handleClickOpen}) {
     return (
         <Card>
         <CardMedia
@@ -109,29 +109,30 @@ export function ConsultanceService() {
             </Typography>
         </CardContent>
         <CardActions>
-            <Button size="small">Request Service</Button>
+            <Button size="small" onClick={handleClickOpen}>Request Service</Button>
             {/* <Button size="small">Learn More</Button> */}
         </CardActions>
         </Card>
     );
 }
 
-export default function Services() {
+export default function Services({handleClickOpen}) {
+    
     return (
         <Container>
             <Grid container spacing={{ xs: 2, md: 3 , lg:4}}>
 
                 <Grid item xs={12} md={6} lg={3}>
-                    <ArtificialInserminationService/>
+                    <ArtificialInserminationService handleClickOpen={handleClickOpen}/>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3}>
-                    <ConsultanceService/>
+                    <ConsultanceService handleClickOpen={handleClickOpen}/>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3}>
-                    <AnimalHealthService/>
+                    <AnimalHealthService handleClickOpen={handleClickOpen}/>
                 </Grid>
                 <Grid item xs={12} md={6} lg={3}>
-                    <NutritionService/>
+                    <NutritionService handleClickOpen={handleClickOpen}/>
                 </Grid>
 
             </Grid>
