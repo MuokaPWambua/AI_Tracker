@@ -24,8 +24,8 @@ export function AnimalHealthService() {
             Health Service
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            We provide medical care and treatment to animals. This include routine checkups, vaccinations, 
+            diagnostic testing, surgical procedures, and treatment of illnesses or injuries. We also help manage chronic conditions.
             </Typography>
         </CardContent>
         <CardActions>
@@ -50,8 +50,9 @@ export function NutritionService() {
             Nutrition Service
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            With expertise in animal nutrition we provide guidance on proper feeding and dietary requirements
+            for animals, from type of food and portion sizes that are appropriate for different
+            stages of an animal's life and for specific medical conditions. 
             </Typography>
         </CardContent>
         <CardActions>
@@ -76,8 +77,10 @@ export function ArtificialInserminationService() {
             Artificial Insermination
             </Typography>
             <Typography variant="body2" color="text.secondary">
-                We are well equipped and offer both local and imported genetics to our customers.
+                We are well equipped and offer both local and imported genetics to our customers. Make a date with Our
+                bull for the best heifer calfs.
             </Typography>
+            <br/>
         </CardContent>
         <CardActions>
             <Button size="small">Request Service</Button>
@@ -101,9 +104,9 @@ export function ConsultanceService() {
             Consultancy Service
             </Typography>
             <Typography variant="body2" color="text.secondary">
-            We providing our clients with everything they need to know from animal health to animal farming.
+            We providing our clients with everything they need to know from animal behavior, animal welfare, animal management,
+            feeding, breeding, and disease prevention strategies to ensure the health and productivity of the animals.
             </Typography>
-            <br/>
         </CardContent>
         <CardActions>
             <Button size="small">Request Service</Button>

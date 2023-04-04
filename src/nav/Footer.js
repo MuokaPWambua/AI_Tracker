@@ -76,7 +76,7 @@ export default function Footer() {
             </Typography>
             <Typography variant="subtitle1" component="span" color="white">
               Email: karogacapwel@gmail.com <br />
-              Phone: +2540701279195 <br />
+              Phone: +2540701379195 <br />
               Phone: +2540722796099 <br />
               Hours: Mon-Fri, 9am-5pm
             </Typography>
@@ -96,7 +96,9 @@ export default function Footer() {
             </Typography>
           </Box>
           <Box style={{ height: '220px', width: '100%' }}>
-            <iframe
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127672.13724104782!2d36.21467237681928!3d-0.3246076074618899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829bd97fd90c9d5%3A0xe5b0750dd35062!2sKanjuiri!5e0!3m2!1sen!2ske!4v1680602892514!5m2!1sen!2ske"
+          
               title="map"
               width="100%"
               height="100%"
@@ -104,8 +106,7 @@ export default function Footer() {
               scrolling="no"
               marginHeight="0"
               marginWidth="0"
-              src={`https://maps.google.com/maps?q=123+Main+St,+Anytown,+USA+12345&z=15&output=embed`}
-            ></iframe>
+          ></iframe>
           </Box>
         </Grid>
       </Grid>

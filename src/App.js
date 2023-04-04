@@ -17,7 +17,7 @@ function App() {
           }}>
             <Box className='welcome-note'>
             <Typography variant="h2" component="h2">Welcome to CK</Typography>
-            your best vertinary service provider.
+            your best veterinarian service provider.
             </Box>
       </Box>
       <br/>
