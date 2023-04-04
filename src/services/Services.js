@@ -12,7 +12,7 @@ import Container from '@mui/material/Container';
 
 export function AnimalHealthService() {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card>
         <CardMedia
             component="img"
             alt="green iguana"
@@ -38,7 +38,7 @@ export function AnimalHealthService() {
 
 export function NutritionService() {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card >
         <CardMedia
             component="img"
             alt="green iguana"
@@ -64,7 +64,7 @@ export function NutritionService() {
 
 export function ArtificialInserminationService() {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card>
         <CardMedia
             component="img"
             alt="green iguana"
@@ -89,7 +89,7 @@ export function ArtificialInserminationService() {
 
 export function ConsultanceService() {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card>
         <CardMedia
             component="img"
             alt="green iguana"
