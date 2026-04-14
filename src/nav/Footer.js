@@ -57,13 +57,13 @@ export default function Footer() {
               Professional veterinary services and smart farming solutions for modern agriculture in Nakuru County and beyond.
             </Typography>
             <Box>
-              <IconButton href={whatsappLink} target="_blank" sx={{ color: '#25D366' }}>
+              <IconButton href={whatsappLink} rel="noreferrer" target="_blank" sx={{ color: '#25D366' }}>
                 <WhatsAppIcon />
               </IconButton>
-              <IconButton href={callLink} sx={{ color: 'white' }}>
+              <IconButton href={callLink} rel="noreferrer" target="_blank" sx={{ color: 'white' }}>
                 <PhoneIcon />
               </IconButton>
-              <IconButton href={`mailto:${email}`} sx={{ color: 'white' }}>
+              <IconButton href={`mailto:${email}`} rel="noreferrer" target="_blank" sx={{ color: 'white' }}>
                 <EmailIcon />
               </IconButton>
             </Box>
@@ -96,7 +96,7 @@ export default function Footer() {
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
               <WhatsAppIcon sx={{ fontSize: 18, color: '#25D366' }} />
               <Typography variant="body2">
-                <a href={whatsappLink} target="_blank" style={{ color: 'white', textDecoration: 'none' }}>
+                <a href={whatsappLink} target="_blank" rel="noreferrer"style={{ color: 'white', textDecoration: 'none' }}>
                   {phoneNumber}
                 </a>
               </Typography>

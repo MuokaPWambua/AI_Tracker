@@ -1,6 +1,6 @@
 // components/PricingSection.js - Professional pricing grid with all service plans
 import React, { useState } from 'react';
-import { Box, Container, Typography, Grid, Card, CardContent, Button, Chip, Zoom, Fade } from '@mui/material';
+import { Box, Container, Typography, Grid, Card, CardContent, Button, Zoom, Fade } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
