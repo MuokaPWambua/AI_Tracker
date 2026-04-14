@@ -15,7 +15,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-const navItems = ['Home', 'Services', 'Pricing', 'Smart Farming', 'Location', 'Contact'];
+const navItems = ['Home'];
 
 function TopAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
