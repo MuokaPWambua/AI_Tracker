@@ -46,7 +46,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(26, 71, 42, 0.92) 0%, rgba(13, 40, 24, 0.88) 0%);
+  background: linear-gradient(135deg, rgba(26, 71, 42, 0.1) 0%, rgba(13, 40, 24, 0.1) 0%);
   display: flex;
   align-items: center;
 }
@@ -596,4 +596,40 @@
     font-size: 1.8rem !important;
     margin-bottom: 0.5rem;
   }
+}
+
+/* Add to App.css - Consistent card styles */
+.services-section .MuiCard-root,
+.pricing-section .MuiCard-root {
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+}
+
+.services-section .MuiCardContent-root,
+.pricing-section .MuiCardContent-root {
+  background-color: transparent;
+}
+
+/* Ensure cards have consistent borders and shadows */
+.services-section .MuiCard-root,
+.pricing-section .MuiCard-root {
+  border: none !important;
+}
+
+/* Popular card special styling */
+.popular-card {
+  border: 2px solid #2d6a4f !important;
+  position: relative;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #2d6a4f;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 0 20px 0 20px;
+  font-weight: 600;
+  z-index: 1;
 }
