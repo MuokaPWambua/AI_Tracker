@@ -23,7 +23,7 @@ function TopAppBar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const primaryPhone = "254722796099";
-  const secondaryPhone = "254701379195";
+
   const whatsappLink = `https://wa.me/${primaryPhone}`;
   const callLink = `tel:+${primaryPhone}`;
 
