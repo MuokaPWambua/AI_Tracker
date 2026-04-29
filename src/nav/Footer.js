@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Brand */}
           <Grid item xs={12} md={4}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
               <img
                 src="/logo.png"
                 alt="Capwel SmartVet Logo"
@@ -93,13 +93,14 @@ export default function Footer() {
               />
             </Box>
             <Box sx={{ mb: 1 }}>
+              
               <Typography variant="h6" sx={{ fontWeight: 800, letterSpacing: '-0.01em' }}>
                 Capwel SmartVet
               </Typography>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 0.5 }}>
                 <VerifiedIcon sx={{ fontSize: 16, color: '#74c69d' }} />
                 <Typography variant="caption" sx={{ color: '#74c69d' }}>
-                  KVB Registered · VTC Reg. No. 7667
+                  KVB Registered
                 </Typography>
               </Box>
             </Box>

@@ -79,7 +79,7 @@ function TopAppBar() {
                 Capwel SmartVet
               </Typography>
               <Typography variant="caption" sx={{ color: '#555', letterSpacing: '0.04em' }}>
-                VTC Reg. No. 7667
+                KVB Registered
               </Typography>
             </Box>
           </Box>
