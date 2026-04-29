@@ -1,4 +1,4 @@
-// components/PricingSection.js - Updated with consistent styling and Request Service button
+// components/PricingSection.js - Capwel SmartVet branding update
 import React, { useState } from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent, Button, Zoom, Fade } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -10,12 +10,19 @@ import PetsIcon from '@mui/icons-material/Pets';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 
 const PHONE_NUMBER = "254722796099";
+const BRAND = "Capwel SmartVet";
 
 const handleWhatsAppRequest = (planName, planPrice, category, features) => {
   const featuresList = features.join(', ');
-  const message = `Hello CK Smart Vet & Farming,%0A%0A*Pricing Plan Request*%0A%0A📋 *Category:* ${category}%0A💳 *Plan:* ${planName}%0A💰 *Price:* ${planPrice}%0A✨ *Features:* ${featuresList}%0A%0A📍 *Location:* Nakuru, Kenya%0A%0A🙋 *Customer Request:* I am interested in this plan. Please provide more details and availability.%0A%0AThank you!`;
-  const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${message}`;
-  window.open(whatsappUrl, '_blank');
+  const message =
+    `Hello ${BRAND},%0A%0A*Pricing Plan Request*%0A%0A` +
+    `📋 *Category:* ${category}%0A` +
+    `💳 *Plan:* ${planName}%0A` +
+    `💰 *Price:* ${planPrice}%0A` +
+    `✨ *Features:* ${featuresList}%0A%0A` +
+    `📍 *Location:* %0A%0A` +
+    `🙋 *Request:* I am interested in this plan. Please provide more details and availability.%0A%0AThank you!`;
+  window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, '_blank');
 };
 
 const pricingData = {
@@ -60,23 +67,23 @@ const pricingData = {
   }
 };
 
-const StyledPricingCard = styled(Card)(({ theme }) => ({
+const StyledPricingCard = styled(Card)(() => ({
   borderRadius: '24px',
   height: '100%',
   transition: 'all 0.3s ease',
   position: 'relative',
   overflow: 'hidden',
   backgroundColor: '#ffffff',
-  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
+  boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
   display: 'flex',
   flexDirection: 'column',
   '&:hover': {
     transform: 'translateY(-8px)',
-    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.12)',
+    boxShadow: '0 20px 40px rgba(0,0,0,0.12)',
   },
 }));
 
-const StyledButton = styled(Button)(({ theme, variant }) => ({
+const StyledButton = styled(Button)(({ variant }) => ({
   borderRadius: '50px',
   padding: '12px',
   fontWeight: 600,
@@ -84,20 +91,12 @@ const StyledButton = styled(Button)(({ theme, variant }) => ({
   marginTop: '1rem',
   ...(variant === 'contained' && {
     backgroundColor: '#1a472a',
-    '&:hover': {
-      backgroundColor: '#2d6a4f',
-      transform: 'translateY(-2px)',
-    },
+    '&:hover': { backgroundColor: '#2d6a4f', transform: 'translateY(-2px)' },
   }),
   ...(variant === 'outlined' && {
     borderColor: '#2d6a4f',
     color: '#2d6a4f',
-    '&:hover': {
-      backgroundColor: '#1a472a',
-      borderColor: '#1a472a',
-      color: 'white',
-      transform: 'translateY(-2px)',
-    },
+    '&:hover': { backgroundColor: '#1a472a', borderColor: '#1a472a', color: 'white', transform: 'translateY(-2px)' },
   }),
 }));
 
@@ -111,22 +110,22 @@ function PricingCard({ plan, category }) {
           </Box>
         )}
         <CardContent sx={{ flexGrow: 1 }}>
-          <Typography variant="h5" className="pricing-plan-name" sx={{ fontWeight: 700, color: '#1a472a', textAlign: 'center', mb: 1 }}>
+          <Typography variant="h5" sx={{ fontWeight: 700, color: '#1a472a', textAlign: 'center', mb: 1 }}>
             {plan.name}
           </Typography>
-          <Typography variant="h3" className="pricing-price" sx={{ fontWeight: 800, color: '#2d6a4f', textAlign: 'center', mb: 2 }}>
+          <Typography variant="h3" sx={{ fontWeight: 800, color: '#2d6a4f', textAlign: 'center', mb: 2, fontSize: '1.75rem !important' }}>
             {plan.price}
           </Typography>
-          <Box className="pricing-features" sx={{ mt: 2 }}>
+          <Box sx={{ mt: 2 }}>
             {plan.features.map((feature, idx) => (
-              <Box key={idx} className="feature-item" sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
-                <CheckCircleIcon sx={{ fontSize: '1.1rem', color: '#74c69d' }} />
+              <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
+                <CheckCircleIcon sx={{ fontSize: '1.1rem', color: '#74c69d', flexShrink: 0 }} />
                 <Typography variant="body2" sx={{ color: '#444' }}>{feature}</Typography>
               </Box>
             ))}
           </Box>
-          <StyledButton 
-            variant={plan.popular ? "contained" : "outlined"} 
+          <StyledButton
+            variant={plan.popular ? 'contained' : 'outlined'}
             fullWidth
             onClick={() => handleWhatsAppRequest(plan.name, plan.price, category, plan.features)}
           >
@@ -139,13 +138,13 @@ function PricingCard({ plan, category }) {
 }
 
 export default function PricingSection() {
-  const [activeTab, setActiveTab] = useState('cctv');
+  const [activeTab, setActiveTab] = useState('veterinary');
 
   const tabs = [
+    { id: 'veterinary', label: 'Vet Services', icon: <LocalHospitalIcon /> },
     { id: 'cctv', label: 'CCTV Installation', icon: <VideocamIcon /> },
     { id: 'monitoring', label: 'Smart Monitoring', icon: <AnalyticsIcon /> },
     { id: 'layout', label: 'Farm Layout', icon: <AgricultureIcon /> },
-    { id: 'veterinary', label: 'Vet Services', icon: <LocalHospitalIcon /> }
   ];
 
   return (
@@ -156,16 +155,15 @@ export default function PricingSection() {
             Pricing Plans
           </Typography>
         </Zoom>
-        <Typography variant="body1" className="section-subtitle" sx={{ textAlign: 'center', color: '#555', maxWidth: 600, mx: 'auto', mb: 5 }}>
+        <Typography variant="body1" sx={{ textAlign: 'center', color: '#555', maxWidth: 600, mx: 'auto', mb: 5 }}>
           Transparent, affordable pricing for all your farming and veterinary needs
         </Typography>
 
         {/* Tab Navigation */}
-        <Box className="pricing-tabs" sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1.5, mb: 5 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1.5, mb: 5 }}>
           {tabs.map((tab) => (
             <Button
               key={tab.id}
-              className={`pricing-tab ${activeTab === tab.id ? 'active' : ''}`}
               onClick={() => setActiveTab(tab.id)}
               startIcon={tab.icon}
               sx={{
@@ -176,10 +174,8 @@ export default function PricingSection() {
                 fontWeight: 600,
                 backgroundColor: activeTab === tab.id ? '#1a472a' : 'white',
                 color: activeTab === tab.id ? 'white' : '#2d6a4f',
-                '&:hover': {
-                  backgroundColor: '#2d6a4f',
-                  color: 'white',
-                },
+                boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+                '&:hover': { backgroundColor: '#2d6a4f', color: 'white' },
               }}
             >
               {tab.label}
@@ -187,19 +183,36 @@ export default function PricingSection() {
           ))}
         </Box>
 
-        {/* Pricing Cards Grid */}
-        <Grid container spacing={4} className="pricing-grid">
+        {/* Category Title */}
+        <Typography variant="h5" sx={{ textAlign: 'center', fontWeight: 600, color: '#1a472a', mb: 4 }}>
+          {pricingData[activeTab].title}
+        </Typography>
+
+        {/* Pricing Cards */}
+        <Grid container spacing={4}>
           {pricingData[activeTab].plans.map((plan, index) => (
-            <Grid item xs={12} md={activeTab === 'veterinary' ? 4 : activeTab === 'monitoring' ? 6 : 4} key={index}>
+            <Grid
+              item
+              xs={12}
+              md={activeTab === 'monitoring' ? 6 : 4}
+              key={index}
+            >
               <PricingCard plan={plan} category={pricingData[activeTab].category} />
             </Grid>
           ))}
         </Grid>
 
-        {/* Note for variable pricing */}
-        <Box className="pricing-note" sx={{ textAlign: 'center', mt: 5, p: 2, backgroundColor: 'rgba(45, 106, 79, 0.1)', borderRadius: 3 }}>
+        <Box sx={{ textAlign: 'center', mt: 5, p: 2, backgroundColor: 'rgba(45,106,79,0.1)', borderRadius: 3 }}>
           <Typography variant="body2" sx={{ color: '#2d6a4f' }}>
-            * Disease Management & Vaccination prices vary based on specific requirements. Contact us for a custom quote.
+            * Disease Management & Vaccination prices vary based on specific requirements.{' '}
+            <a
+              href={`https://wa.me/${PHONE_NUMBER}?text=Hello ${BRAND}, I need a custom quote for veterinary services.`}
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: '#1a472a', fontWeight: 700 }}
+            >
+              Contact us for a custom quote →
+            </a>
           </Typography>
         </Box>
       </Container>
