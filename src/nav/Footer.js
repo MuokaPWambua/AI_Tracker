@@ -232,7 +232,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <Box sx={{ textAlign: 'center', mt: 5, pt: 3, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
           <Typography variant="body2" sx={{ opacity: 0.5, fontSize: '0.8rem' }}>
-            © {new Date().getFullYear()} Capwel SmartVet. All rights reserved. &nbsp;|&nbsp; KVB Registration No. VTC 7667
+            © {new Date().getFullYear()} Capwel SmartVet. All rights reserved. &nbsp;|&nbsp;
           </Typography>
         </Box>
       </Container>
