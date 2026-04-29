@@ -80,7 +80,7 @@ const ServiceCard = ({ image, title, description, serviceName, serviceDetails, t
 export function DairyCowService() {
   return (
     <ServiceCard
-      image="/dairy_cow.jpg"
+      image="animal_health.jpg"
       title="Dairy Cow Treatment"
       tag="Most Requested"
       description="Comprehensive health management for your dairy herd including diagnosis, treatment, disease prevention, and productivity optimization for maximum milk output."
@@ -93,7 +93,7 @@ export function DairyCowService() {
 export function VaccinationService() {
   return (
     <ServiceCard
-      image="/vaccination.jpg"
+      image="/ai.jpg"
       title="Vaccination Programs"
       description="Structured vaccination schedules to protect your livestock against common diseases. We handle cattle, goats, sheep, and poultry across Nakuru County."
       serviceName="Vaccination Program"
@@ -105,7 +105,7 @@ export function VaccinationService() {
 export function ArtificialInseminationService() {
   return (
     <ServiceCard
-      image="/ai.jpg"
+      image="/artificial_insermination.jpeg"
       title="Breeding & AI Services"
       tag="High Success Rate"
       description="Access local and imported genetics for your cattle farm. Our expert AI technicians deliver high success rates with full follow-up care included."
@@ -118,7 +118,7 @@ export function ArtificialInseminationService() {
 export function EmergencyService() {
   return (
     <ServiceCard
-      image="/emergency_vet.jpg"
+      image="/animal_health_1.jpg"
       title="Emergency Care"
       tag="24/7"
       description="Round-the-clock emergency veterinary response for critical animal conditions. Fast response times across Nakuru, Dundori, Olkalou and surrounding areas."
@@ -131,7 +131,7 @@ export function EmergencyService() {
 export function GoatSheepService() {
   return (
     <ServiceCard
-      image="/goat_sheep.jpg"
+      image="/goat&sheep.jpeg"
       title="Goat & Sheep Care"
       description="Specialized small ruminant health services including treatment, deworming, vaccination, breeding support, and nutritional guidance for goat and sheep farmers."
       serviceName="Goat & Sheep Care"
