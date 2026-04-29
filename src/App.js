@@ -123,7 +123,7 @@ function App() {
                   Professional Veterinary Services in Nakuru &amp; Surrounding Areas
                 </Typography>
                 <Typography variant="h5" component="p" className="hero-subtitle">
-                  Licensed Vet (VTC 7667) &nbsp;|&nbsp; On-Call &amp; Farm Visits Available
+                  Licensed Vet &nbsp;|&nbsp; On-Call &amp; Farm Visits Available
                 </Typography>
                 <Box className="hero-badges">
                   <Box className="hero-badge">

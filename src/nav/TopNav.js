@@ -15,6 +15,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import VerifiedIcon from '@mui/icons-material/Verified';
 
 const navItems = ['Home', 'Services', 'About', 'Tips', 'Contact'];
 
@@ -78,9 +79,13 @@ function TopAppBar() {
               >
                 Capwel SmartVet
               </Typography>
-              <Typography variant="caption" sx={{ color: '#555', letterSpacing: '0.04em' }}>
-                KVB Registered
-              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 0.5 }}>
+                <VerifiedIcon sx={{ fontSize: 16, color: '#74c69d' }} />
+                <Typography variant="caption" sx={{ color: '#74c69d' }}>
+                  KVB Registered
+                </Typography>
+              </Box>
+
             </Box>
           </Box>
 
