@@ -224,7 +224,7 @@ function App() {
                   Capwel SmartVet
                 </Typography>
                 <Typography variant="h6" className="about-vet-name">
-                  Led by Capwel Karogo Mwangi — VTC Reg. No. 7667
+                  Led by Capwel Karogo Mwangi
                 </Typography>
                 <Typography variant="body1" className="about-text">
                   At Capwel SmartVet, we are dedicated to delivering reliable, modern, and accessible veterinary
