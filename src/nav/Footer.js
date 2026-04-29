@@ -6,7 +6,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
-import VerifiedIcon from '@mui/icons-material/Verified';
 
 // Social media SVG icons as inline components
 const FacebookIcon = () => (
@@ -97,12 +96,7 @@ export default function Footer() {
               <Typography variant="h6" sx={{ fontWeight: 800, letterSpacing: '-0.01em' }}>
                 Capwel SmartVet
               </Typography>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 0.5 }}>
-                <VerifiedIcon sx={{ fontSize: 16, color: '#74c69d' }} />
-                <Typography variant="caption" sx={{ color: '#74c69d' }}>
-                  KVB Registered
-                </Typography>
-              </Box>
+            
             </Box>
             <Typography variant="body2" sx={{ mb: 3, opacity: 0.7, lineHeight: 1.7 }}>
               Reliable, modern veterinary services for farmers and livestock owners across Nakuru County and beyond.

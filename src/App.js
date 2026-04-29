@@ -211,9 +211,6 @@ function App() {
                     <Typography variant="caption" sx={{ display: 'block', color: '#555', lineHeight: 1 }}>
                       KVB Registered
                     </Typography>
-                    <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#1a472a' }}>
-                      Reg. No. VTC 7667
-                    </Typography>
                   </Box>
                 </Box>
               </Box>
